@@ -1,4 +1,3 @@
-import { characters } from "../../characters/characters.js";
 import Component from "../Component/Component.js";
 
 class CardComponent extends Component {
@@ -35,12 +34,37 @@ class CardComponent extends Component {
             </div>
             <div class="character__overlay">
               <ul class="list-unstyled">
-                <li>Years of Reign: X</li>
-                <li>Weapon: XXX</li>
-                <li>Dexterity: X</li>
-                <li>Kiss Ass level: X</li>
-                <li>Advises to: X</li>
-                <li>Serves to: X</li>
+              ${
+                this.character?.yearsOfReign
+                  ? `<li>Years of Reign: ${this.character.yearsOfReign}</li>`
+                  : ""
+              }
+              ${
+                this.character?.weapon
+                  ? `<li>Weapon: ${this.character.weapon}</li>`
+                  : ""
+              }
+              ${
+                this.character?.dexterity
+                  ? `<li>Dexterity: ${this.character.dexterity}</li>`
+                  : ""
+              }
+                ${
+                  this.character?.kissAssLevel
+                    ? `<li>Kiss Ass level: ${this.character.kissAssLevel}</li>`
+                    : ""
+                }
+                ${
+                  this.character?.advises
+                    ? `<li>Advises to: ${this.character.advises.characterData.name}</li>`
+                    : ""
+                }
+                ${
+                  this.character?.serves
+                    ? `<li>Serves to: ${this.character.serves.characterData.name}</li>`
+                    : ""
+                }
+           
               </ul>
               <div class="character__actions">
                 <button class="character__action btn">speak</button>

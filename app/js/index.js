@@ -1,4 +1,3 @@
-import Character from "./characters/Character/Character.js";
 import { characters } from "./characters/characters.js";
 import AppComponent from "./components/AppComponent/AppComponent.js";
 import CardComponent from "./components/CardComponent/CardComponent.js";
